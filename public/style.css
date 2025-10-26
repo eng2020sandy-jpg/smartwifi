@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+:root{--bg:#0f172a;--card:#0b1220;--muted:#8aa0b6;--text:#e6eef9;--primary:#00b5ff;--border:#1e293b;--danger:#ef4444;--success:#10b981;--warn:#f59e0b}
+*{box-sizing:border-box} html,body{height:100%}
+body{font-family:'Cairo',sans-serif;background:linear-gradient(135deg,#0b1020,#101a34);color:var(--text);margin:0;display:flex;justify-content:center}
+.hidden{display:none}.card{width:min(520px,92vw);margin:6vh auto;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+h2,h3{margin:0 0 12px 0}.muted{color:var(--muted);margin:-6px 0 12px}
+label{display:block;margin:10px 0 6px} input,textarea,select{width:100%;background:#0a1325;border:1px solid var(--border);border-radius:12px;padding:10px 12px;color:var(--text)}
+textarea{min-height:110px} button{background:var(--primary);color:#00131f;border:none;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}
+button.ghost{background:transparent;color:var(--text);border:1px solid var(--border)} button.primary{background:var(--primary)}
+button.danger{background:var(--danger);color:#fff} button.success{background:var(--success);color:#00131f} button.install{background:var(--warn);color:#1f1400}
+button:disabled{opacity:.6;cursor:not-allowed} .error{color:#ff8f8f}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:16px;margin-top:12px} table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid var(--border);text-align:center}
+.topbar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 16px;background:#0b1220;border-bottom:1px solid var(--border);position:sticky;top:0}
+.brand{font-weight:800;letter-spacing:.5px} .tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{background:#0a1325;color:var(--text);border:1px solid var(--border)} .tabs button.active{background:var(--primary);color:#00131f;border-color:#00a3e6}
+.content{padding:16px;max-width:1200px;margin:0 auto}.tab{display:none}.tab.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;background:#0b1220;border:1px solid var(--border);padding:12px;border-radius:16px}
+.grid > *:nth-child(n){grid-column:span 2} .grid button{grid-column:span 2}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.grid > *{grid-column:span 2}}
+.spinner{display:none;width:18px;height:18px;border:3px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;margin-inline-start:10px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
